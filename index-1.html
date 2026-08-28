@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradeNova — Smart Trading Platform</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#07111f;color:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{border-bottom:1px solid rgba(255,255,255,.08);background:#081525;position:sticky;top:0;z-index:10}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:24px;font-weight:800;color:#31d6a4}
+    .logo span{color:#fff}
+    .links{display:flex;gap:28px;color:#b8c4d3;font-size:14px}
+    .links a:hover{color:#31d6a4}
+    .btn{display:inline-block;background:#31d6a4;color:#04120e;padding:12px 20px;border-radius:8px;font-weight:700;border:0;cursor:pointer}
+    .btn.secondary{background:transparent;color:#fff;border:1px solid #2a3b50}
+    .hero{padding:90px 0 70px;background:radial-gradient(circle at 80% 20%,#123b42 0,#07111f 40%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    .tag{display:inline-block;padding:7px 12px;border-radius:20px;background:#0e2b31;color:#50e0b6;font-size:13px;margin-bottom:18px}
+    h1{font-size:56px;line-height:1.08;margin-bottom:20px}
+    h1 span{color:#31d6a4}
+    .hero p{color:#aeb9c7;font-size:18px;max-width:620px;margin-bottom:30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .dashboard{background:#0b1929;border:1px solid #1c3045;border-radius:18px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .dash-top{display:flex;justify-content:space-between;margin-bottom:20px;color:#aeb9c7}
+    .balance{font-size:34px;font-weight:800;color:#fff}
+    .up{color:#31d6a4;font-size:14px}
+    .chart{height:190px;position:relative;border-bottom:1px solid #24374b;background:repeating-linear-gradient(to bottom,transparent 0,transparent 37px,#14283b 38px)}
+    svg{width:100%;height:100%}
+    .markets{padding:75px 0}
+    .section-title{text-align:center;margin-bottom:38px}
+    .section-title h2{font-size:36px;margin-bottom:8px}
+    .section-title p{color:#8f9eae}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#0b1929;border:1px solid #1c3045;border-radius:14px;padding:24px}
+    .icon{width:44px;height:44px;border-radius:10px;background:#10352f;color:#31d6a4;display:grid;place-items:center;font-weight:800;margin-bottom:18px}
+    .card h3{margin-bottom:8px}.card p{color:#91a0b1;font-size:14px}
+    .stats{background:#0a1726;padding:45px 0;border-top:1px solid #17283a;border-bottom:1px solid #17283a}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+    .stat strong{display:block;font-size:30px;color:#31d6a4}.stat span{color:#8f9eae;font-size:13px}
+    .cta{padding:80px 0}.cta-box{background:linear-gradient(135deg,#0d2d35,#0b1929);border:1px solid #1c4a49;border-radius:20px;padding:55px;text-align:center}
+    .cta-box h2{font-size:38px;margin-bottom:12px}.cta-box p{color:#a7b4c2;margin-bottom:25px}
+    footer{padding:30px 0;border-top:1px solid #17283a;color:#718092;font-size:13px}
+    footer .container{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:800px){
+      .links{display:none}.hero-grid{grid-template-columns:1fr}h1{font-size:42px}
+      .cards{grid-template-columns:1fr}.stat-grid{grid-template-columns:repeat(2,1fr);gap:25px}
+      .cta-box{padding:35px 20px}footer .container{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Trade<span>Nova</span></div>
+      <div class="links">
+        <a href="#markets">Markets</a><a href="#features">Features</a><a href="#about">About</a>
+      </div>
+      <a class="btn" href="#start">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="tag">SMART • SIMPLE • DEMO READY</div>
+      <h1>Trade smarter with <span>confidence.</span></h1>
+      <p>A modern trading-platform landing page with a clean dashboard, market cards and responsive design. Built as an original template.</p>
+      <div class="actions">
+        <a class="btn" href="#start">Create Account</a>
+        <a class="btn secondary" href="#markets">Explore Markets</a>
+      </div>
+    </div>
+    <div class="dashboard">
+      <div class="dash-top"><span>Portfolio</span><span class="up">+4.82% Demo</span></div>
+      <div class="balance">$24,680.40</div>
+      <div class="chart">
+        <svg viewBox="0 0 600 190" preserveAspectRatio="none">
+          <polyline points="0,155 55,145 105,160 155,120 205,130 250,95 300,110 350,70 400,88 450,45 500,60 550,25 600,38"
+            fill="none" stroke="#31d6a4" stroke-width="4"/>
+        </svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:15px;color:#8f9eae;font-size:13px">
+        <span>24H Change</span><span class="up">+$1,134.20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stat-grid">
+    <div class="stat"><strong>24/7</strong><span>Platform Access</span></div>
+    <div class="stat"><strong>50+</strong><span>Market Pairs</span></div>
+    <div class="stat"><strong>Fast</strong><span>Interface</span></div>
+    <div class="stat"><strong>100%</strong><span>Responsive UI</span></div>
+  </div>
+</section>
+
+<section class="markets" id="features">
+  <div class="container">
+    <div class="section-title"><h2>Everything you need</h2><p>A polished interface for a modern finance project.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">↗</div><h3>Live Markets</h3><p>Display market prices and performance in a simple, easy-to-read layout.</p></div>
+      <div class="card"><div class="icon">▣</div><h3>Simple Dashboard</h3><p>Keep portfolio information, charts and key metrics in one place.</p></div>
+      <div class="card"><div class="icon">✓</div><h3>Secure Design</h3><p>Clean account-focused screens designed for a professional user experience.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="markets" id="markets">
+  <div class="container">
+    <div class="section-title"><h2>Popular markets</h2><p>Demo data for the website interface.</p></div>
+    <div class="cards">
+      <div class="card"><h3>BTC / USDT</h3><p>Bitcoin</p><strong style="font-size:25px">$67,420</strong> <span class="up">+2.31%</span></div>
+      <div class="card"><h3>ETH / USDT</h3><p>Ethereum</p><strong style="font-size:25px">$3,420</strong> <span class="up">+1.74%</span></div>
+      <div class="card"><h3>SOL / USDT</h3><p>Solana</p><strong style="font-size:25px">$182.50</strong> <span class="up">+3.08%</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="start">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Start with the demo</h2>
+      <p>This template is for demonstration and website-development purposes. It does not process real deposits or trades.</p>
+      <button class="btn" onclick="alert('Demo account button clicked!')">Open Demo Account</button>
+    </div>
+  </div>
+</section>
+
+<footer id="about">
+  <div class="container">
+    <span>© 2026 TradeNova. Original demo template.</span>
+    <span>Trading involves risk. Demo interface only.</span>
+  </div>
+</footer>
+</body>
+</html>
